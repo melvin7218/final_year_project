@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_marginBottom="16dp"
+    android:background="@drawable/white_round"
+    android:elevation="2dp">
+
+    <!-- Header Bar (Color will be set programmatically) -->
+    <LinearLayout
+        android:id="@+id/categoryHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/breakfast_color"
+        android:padding="12dp">
+
+        <TextView
+            android:id="@+id/mealCategoryTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Breakfast"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/mealNutritionSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="261 calories, 2g protein, 33 carbs, 1g fat"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="2dp" />
+
+    </LinearLayout>
+
+    <!-- Content Area (Light Beige/Orange) -->
+    <LinearLayout
+        android:id="@+id/mealContentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFF8E1"
+        android:padding="12dp"
+        android:minHeight="60dp">
+
+        <!-- Recipe cards will be added here dynamically -->
+
+        <!-- Add Something to Eat Button -->
+        <TextView
+            android:id="@+id/addMealButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADD SOMETHING TO EAT"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="8dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

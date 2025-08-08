@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".my_recipe">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TastyNote"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/menu_line_logo" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/my_recipes_recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:layout_below="@+id/header"/>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_background">
+
+        <!-- Icons like home, search, add, grocery, account -->
+        <ImageView
+            android:id="@+id/home_logo_footer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/home_logo" />
+
+        <ImageView
+            android:id="@+id/meal_plan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/home_logo_footer"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/search_logo" />
+
+        <ImageView
+            android:id="@+id/search_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="101dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/background_add" />
+
+        <ImageView
+            android:id="@+id/add_recipe_logo"
+            android:layout_width="61dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:onClick="onAddRecipeClick"
+            android:src="@drawable/chef_hat_button" />
+
+        <ImageView
+            android:id="@+id/grocery_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/grocery_list" />
+
+        <ImageView
+            android:id="@+id/account_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@+id/grocery_logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/account_setting_logo" />
+    </RelativeLayout>
+
+</RelativeLayout>

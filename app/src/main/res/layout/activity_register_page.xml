@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".RegisterPage">
+
+    <TextView
+        android:id="@+id/textView_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up "
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:layout_marginTop="100dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_title"
+        android:layout_alignLeft="@id/etUsername"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="20dp"
+        android:text="Username"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView_name"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Username" />
+
+    <TextView
+        android:id="@+id/textView_Password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etUsername"
+        android:layout_alignLeft="@+id/etpassword"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="16dp"
+        android:text="Password"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="243dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_Password"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="Password"
+        />
+
+    <TextView
+        android:id="@+id/textView_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:layout_marginTop="16dp"
+        android:layout_below="@+id/etpassword"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/etemail"
+        android:textColor="@color/black"
+        android:textSize="18dp"/>
+
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="241dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_email"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="abc123@gmail.com" />
+
+    <Button
+        android:id="@+id/button_Register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textStyle="bold"
+        android:layout_below="@+id/etemail"
+        android:layout_alignRight="@+id/etemail"
+        android:background="@drawable/button_passthrough_state"
+        android:backgroundTint="@color/DarkBlue"
+        android:textColor="@color/white"/>
+
+
+    <Button
+        android:id="@+id/button_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/etemail"
+        android:layout_below="@+id/etemail"
+        android:background="@drawable/button_passthrough_state"
+        android:backgroundTint="@color/DarkRed"
+        android:textColor="@color/white"/>
+
+    <ImageView
+        android:id="@+id/return_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:srcCompat="@drawable/return_logo"
+        android:layout_margin="10dp"
+        />
+
+
+</RelativeLayout>

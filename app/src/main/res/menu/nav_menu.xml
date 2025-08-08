@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Group for menu items -->
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/home_logo"
+            android:title="Home"/>
+
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/category_logo"
+            android:title="Categories"
+            />
+
+        <item
+            android:id="@+id/nav_favorite"
+            android:icon="@drawable/favorite_logo"
+            android:title="Favorite"
+            />
+
+        <item
+            android:id="@+id/nav_my_recipe"
+            android:icon="@drawable/recipe_logo"
+            android:title="My Recipe"
+            />
+
+        <item
+            android:id="@+id/nav_grocery_list"
+            android:icon="@drawable/grocery_list"
+            android:title="Grocery List"
+            />
+
+        <item
+            android:id="@+id/nav_meal_plan"
+            android:icon="@drawable/meal_plan"
+            android:title="Meal Plan"
+            />
+
+        <item android:id="@+id/nav_logout"
+            android:icon="@drawable/logout_logo"
+            android:title="Logout"/>
+    </group>
+</menu>

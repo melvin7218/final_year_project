@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background">
+
+    <TextView
+        android:id="@+id/text_addRecipe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Add Recipe"
+        android:textColor="#432c81"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+
+    <Button
+        android:id="@+id/addRecipe_btnUpload"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/text_addRecipe"
+        android:layout_alignRight="@+id/addRecipe_scrollView"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/button_passthrough_state"
+        android:backgroundTint="@color/DarkBlue"
+        android:text="Upload"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/addRecipe_btnCancel"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:layout_below="@+id/text_addRecipe"
+        android:layout_alignLeft="@+id/addRecipe_scrollView"
+        android:layout_marginLeft="40dp"
+        android:background="@drawable/button_passthrough_state"
+        android:backgroundTint="@color/DarkRed"
+        android:text="Cancel"
+        android:textColor="@color/white" />
+
+    <ScrollView
+        android:id="@+id/addRecipe_scrollView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_addRecipe"
+
+        android:layout_marginTop="30dp"
+
+        android:backgroundTint="@color/background">
+
+        <RelativeLayout
+            android:id="@+id/addRecipe_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/addRecipe_timage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/addRecipe_image"
+                android:text="Recipe Photo"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/addRecipe_image"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_below="@+id/addRecipe_timage"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_passthrough_state"
+                android:backgroundTint="#EDECF4"
+                app:srcCompat="@drawable/add_logo" />
+
+            <TextView
+                android:id="@+id/addRecipe_tTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addRecipe_image"
+                android:layout_alignLeft="@+id/addRecipe_etTitle"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Title"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <EditText
+                android:id="@+id/addRecipe_etTitle"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_below="@+id/addRecipe_tTitle"
+                android:background="@drawable/button_passthrough_state"
+                android:backgroundTint="#EDECF4"
+                android:hint="Recipe Title"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/addRecipe_tDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addRecipe_etTitle"
+                android:layout_alignLeft="@+id/addRecipe_etDescription"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/addRecipe_etDescription"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@+id/addRecipe_tDescription"
+                android:background="@drawable/button_passthrough_state"
+                android:backgroundTint="#EDECF4"
+                android:hint="Recipe Description"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/addRecipe_tTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addRecipe_etDescription"
+                android:layout_alignLeft="@+id/addRecipe_etTime"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Time Recipe"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/time_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addRecipe_tTime">
+                <EditText
+                    android:id="@+id/addRecipe_etTime"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:inputType="number"
+                    android:background="@drawable/button_passthrough_state"
+                    android:backgroundTint="#EDECF4"
+                    android:hint="Time"
+                    android:textAlignment="center" />
+
+                <Spinner
+                    android:id="@+id/addRecipe_timeUnit"
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/button_passthrough_state"
+                    android:backgroundTint="#EDECF4"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addRecipe_tCuisineType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/time_container"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Cuisine Type"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/layout_Cuisine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addRecipe_tCuisineType">
+
+
+                <Spinner
+                    android:id="@+id/addRecipe_spCuisine"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/button_passthrough_state"
+                    android:backgroundTint="#EDECF4"/>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addRecipe_tDietary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_Cuisine"
+                android:text="Dietary"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/addRecipe_dietary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/addRecipe_tDietary"
+                >
+
+                <RadioGroup
+                    android:id="@+id/addRecipe_rgDietary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/addRecipe_cbVegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Vegan"
+                    android:textStyle="bold" />
+
+                <RadioButton
+                    android:id="@+id/addRecipe_cbNonVegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Non Vegan"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="50dp"/>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/field_visibility"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/addRecipe_dietary">
+
+                <RadioGroup
+                    android:id="@+id/addRecipe_rgVisibility"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/rbPublic"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Public"
+                        android:checked="true"
+                        android:textStyle="bold"/>
+
+                    <RadioButton
+                        android:id="@+id/rbCommunity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Community"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="30dp"/>
+                    <RadioButton
+                        android:id="@+id/rbPrivate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Private"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="30dp"/>
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/addRecipe_tIngredient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/field_visibility"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Ingredient"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+
+            <RelativeLayout
+                android:id="@+id/ingredient_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addRecipe_tIngredient"
+                >
+
+                <RelativeLayout
+                    android:id="@+id/ingredient1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <EditText
+                        android:id="@+id/amount_ingredient1"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"
+                        android:hint="Amount"
+                        android:inputType="numberDecimal"
+                        android:textAlignment="center"/>
+
+                    <AutoCompleteTextView
+                        android:id="@+id/name_ingeredient1"
+                        android:layout_width="170dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"
+                        android:inputType="textAutoComplete"
+                        android:hint="Ingredient"
+                        android:completionThreshold="1"
+                        android:layout_toRightOf="@id/amount_ingredient1"
+                        android:dropDownHeight="200dp"/>
+
+                    <Spinner
+                        android:id="@+id/addRecipe_measurement"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"/>
+
+                    <ImageView
+                        android:id="@+id/delete_ingredient1"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"
+                        android:src="@drawable/dustbin_logo"
+                        android:layout_centerHorizontal="true"
+                        android:layout_below="@id/amount_ingredient1"/>
+
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnAddIngredient"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/ingredient1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_passthrough_state"
+                    android:backgroundTint="@color/DarkBlue"
+                    android:text="+Add ingredient"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/addRecipe_tInstruction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ingredient_layout"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:text="Instruction"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:id="@+id/instruction_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/addRecipe_tInstruction">
+
+
+                <RelativeLayout
+                    android:id="@+id/instruction1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <EditText
+                        android:id="@+id/name_instruction1"
+                        android:layout_width="310dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"
+                        android:hint="Instruction"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:id="@+id/delete_instruction1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@+id/name_instruction1"
+                        android:background="@drawable/button_passthrough_state"
+                        android:backgroundTint="#EDECF4"
+                        android:src="@drawable/dustbin_logo"
+                       />
+                </RelativeLayout>
+
+                <Button
+                    android:id="@+id/btnAddInstruction"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_below="@+id/instruction1"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/button_passthrough_state"
+                    android:backgroundTint="@color/DarkBlue"
+                    android:text="+Add instruction"
+                    android:textColor="@color/white" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

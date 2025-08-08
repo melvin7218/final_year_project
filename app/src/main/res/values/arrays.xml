@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="activity_levels">
+        <item>Sedentary</item>
+        <item>Lightly Active</item>
+        <item>Moderately Active</item>
+        <item>Very Active</item>
+        <item>Extra Active</item>
+    </string-array>
+
+    <string-array name="meal_category">
+        <item>Breakfast</item>
+        <item>Lunch</item>
+        <item>Dinner</item>
+    </string-array>
+    
+    <string-array name="time_units">
+        <item>Hours</item>
+        <item>Mins</item>
+    </string-array>
+
+    <string-array name="cuisine_type">
+        <item>Chinese</item>
+        <item>India</item>
+        <item>Malay</item>
+        <item>Italian</item>
+    </string-array>
+
+    <string-array name="ingredient_measurement">
+        <item>teaspoon</item>
+        <item>tablespoon</item>
+        <item>fluid ounce</item>
+        <item>cup</item>
+        <item>pint</item>
+        <item>quart</item>
+        <item>gallon</item>
+        <item>milliliter</item>
+        <item>liter</item>
+        <item>ounce</item>
+        <item>pound</item>
+        <item>gram</item>
+        <item>kilogram</item>
+        <item>piece</item>
+        <item>slice</item>
+        <item>clove</item>
+        <item>can</item>
+        <item>jar</item>
+        <item>package</item>
+        <item>bottle</item>
+        <item>stick</item>
+        <item>bunch</item>
+        <item>sprig</item>
+        <item>pinch</item>
+        <item>dash</item>
+        <item>drop</item>
+    </string-array>
+
+    <string-array name="serving_size">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+
+    <string-array name="exercise_types">
+        <item>Running</item>
+        <item>Walking</item>
+        <item>Cycling</item>
+        <item>Swimming</item>
+        <item>Gym Workout</item>
+        <item>Yoga</item>
+        <item>Pilates</item>
+        <item>Dancing</item>
+        <item>Basketball</item>
+        <item>Soccer</item>
+        <item>Tennis</item>
+        <item>Badminton</item>
+        <item>Hiking</item>
+        <item>Jogging</item>
+        <item>Weight Training</item>
+        <item>Cardio</item>
+        <item>Stretching</item>
+        <item>Other</item>
+    </string-array>
+</resources>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FinalYearProject"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".meal_plan_add_recipe"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".exercise_page"
+            android:exported="false"
+            android:label="@string/title_activity_exercise_page"
+            android:theme="@style/Theme.FinalYearProject" />
+        <activity
+            android:name=".my_recipe"
+            android:exported="false" />
+        <activity
+            android:name=".favorite_recipe"
+            android:exported="false" />
+        <activity
+            android:name=".family_preference_setting"
+            android:exported="false" />
+        <activity
+            android:name=".family_preference"
+            android:exported="false" />
+        <activity
+            android:name=".mealPlan_nutrition_analysis"
+            android:exported="false" />
+        <activity
+            android:name=".recipe_details_nutrition"
+            android:exported="false" />
+        <activity
+            android:name=".recipe_details_instruction"
+            android:exported="false" />
+        <activity
+            android:name=".recipe_details_ingredients"
+            android:exported="false" />
+        <activity
+            android:name=".user_preference_afterLogin"
+            android:exported="false"
+            android:label="@string/title_activity_user_preference_after_login"
+            android:theme="@style/Theme.FinalYearProject" />
+        <activity
+            android:name=".pantry_list"
+            android:exported="false" />
+        <activity
+            android:name=".meal_plan"
+            android:exported="false" />
+        <activity
+            android:name=".more_recipe_api"
+            android:exported="false" />
+        <activity
+            android:name=".userPreferenceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".groceryList"
+            android:exported="false" />
+        <activity
+            android:name=".detail_recipe"
+            android:exported="false" />
+        <activity
+            android:name=".add_recipe_page"
+            android:exported="false" />
+        <activity
+            android:name=".add_recipe"
+            android:exported="false" />
+        <activity
+            android:name=".reset_password"
+            android:exported="false" />
+        <activity
+            android:name=".UpdatePassword"
+            android:exported="false" />
+        <activity
+            android:name=".forget_Password"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".allergy_setting"
+            android:exported="false" />
+        <activity
+            android:name=".buttomSheet_allergy_ingredient"
+            android:exported="false" />
+        <activity
+            android:name=".user_setting"
+            android:exported="false" />
+        <activity
+            android:name=".preference_setting"
+            android:exported="false" />
+        <activity
+            android:name=".preference_page"
+            android:exported="false" />
+        <activity
+            android:name=".account_page"
+            android:exported="false" />
+        <activity
+            android:name=".footer"
+            android:exported="false" />
+        <activity
+            android:name=".user_Setting"
+            android:exported="false" />
+        <activity
+            android:name=".header"
+            android:exported="false" />
+        <activity
+            android:name=".MainScreen"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Personal_Details"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity2"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterPage"
+            android:exported="false" />
+        <activity
+            android:name=".LoginPage"
+            android:exported="false" />
+    </application>
+
+</manifest>

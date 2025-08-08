@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".userPreferenceActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Preference"
+            android:textSize="30dp"
+            android:textColor="@color/DarkBlue"
+            android:textStyle="bold"
+            android:layout_gravity="center"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allergy Ingredients"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedAllergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="None selected"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnSelectAllergy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Allergy Ingredients"
+            android:background="@drawable/button_passthrough_state" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cuisine Type"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedCuisineType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="None selected"
+            android:textSize="16sp"
+            android:padding="8dp"/>
+
+        <Button
+            android:id="@+id/btnSelectCuisineType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Cuisine Type"
+            android:background="@drawable/button_passthrough_state" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Not Selected"
+            android:textSize="16dp"/>
+
+        <Button
+            android:id="@+id/btnSelectAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Age"
+            android:background="@drawable/button_passthrough_state"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Height (cm)"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedHeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Selected"
+            android:textSize="16dp"
+            />
+
+        <Button
+            android:id="@+id/btnSelectHeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Height"
+            android:background="@drawable/button_passthrough_state"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Weight (kg)"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvSelectedWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Not Selected"
+            android:textSize="16dp"
+            />
+
+        <Button
+            android:id="@+id/btnSelectWeight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Weight"
+            android:background="@drawable/button_passthrough_state"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <RadioGroup
+            android:id="@+id/rgGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male"
+                android:checked="true"/>
+
+            <RadioButton
+                android:id="@+id/rbFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Level"
+            android:textSize="16sp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"/>
+
+        <Spinner
+            android:id="@+id/spActivityLevel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/activity_levels"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Preferences"
+            android:layout_marginTop="24dp"></Button>
+    </LinearLayout>
+</ScrollView>

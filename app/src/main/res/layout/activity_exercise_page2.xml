@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="@color/background">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        >
+
+        <TextView
+            android:id="@+id/text_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="TastyNote"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/menu"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/menu_line_logo" />
+    </RelativeLayout>
+
+    <!-- Scrollable Content Area -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_above="@id/footer"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/weekSelectorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/weekSelectorSpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+
+            <!-- Day selection row -->
+            <LinearLayout
+                android:id="@+id/daySelectorContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="8dp">
+
+                <Button
+                    android:id="@+id/buttonMon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Mon" />
+                <Button
+                    android:id="@+id/buttonTue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Tue"/>
+                <Button
+                    android:id="@+id/buttonWed"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Wed"/>
+                <Button
+                    android:id="@+id/buttonThu"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Thu"/>
+                <Button
+                    android:id="@+id/buttonFri"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Fri"/>
+                <Button
+                    android:id="@+id/buttonSat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sat"/>
+                <Button
+                    android:id="@+id/buttonSun"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Sun"/>
+            </LinearLayout>
+            <!-- Recipe or Exercise Selector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/recipe_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Recipe"
+                    android:textColor="@color/purple"
+                    android:background="@color/light_blue"
+                    android:layout_weight="1"
+                    android:textStyle="bold"
+                    android:textSize="24dp"/>
+
+                <Button
+                    android:id="@+id/exercise_page"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Exercise"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    android:textSize="24dp"
+                    android:textColor="@color/white"
+                    android:background="@color/purple"
+                    />
+            </LinearLayout>
+
+            <!-- Calories status below day selector -->
+            <TextView
+                android:id="@+id/calories_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Calories Remaining"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                />
+
+            <!-- Calories today display container -->
+            <FrameLayout
+                android:id="@+id/caloriesTodayContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="8dp" />
+
+            <LinearLayout
+                android:id="@+id/weekMealPlanContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mealPlanRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:background="@android:color/transparent"
+                />
+
+            <LinearLayout
+                android:id="@+id/mealPlanContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+
+
+
+            <Button
+                android:id="@+id/nutrition_analysis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nutrition Analysis"
+                android:backgroundTint="@color/primary_blue"
+                android:background="@drawable/button_passthrough_state"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:layout_marginTop="5dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer_background">
+
+        <!-- Icons like home, search, add, grocery, account -->
+        <ImageView
+            android:id="@+id/home_logo_footer"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/home_logo" />
+
+        <ImageView
+            android:id="@+id/meal_plan"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@id/home_logo_footer"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/search_logo" />
+
+        <ImageView
+            android:id="@+id/search_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="101dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/background_add" />
+
+        <ImageView
+            android:id="@+id/add_recipe_logo"
+            android:layout_width="61dp"
+            android:layout_height="46dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="25dp"
+            android:onClick="onAddRecipeClick"
+            android:src="@drawable/chef_hat_button" />
+
+        <ImageView
+            android:id="@+id/grocery_logo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="230dp"
+            android:layout_marginTop="70dp"
+            android:src="@drawable/grocery_list" />
+
+        <ImageView
+            android:id="@+id/account_setting"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_toEndOf="@+id/grocery_logo"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/account_setting_logo" />
+    </RelativeLayout>
+
+</RelativeLayout>
+
